@@ -186,42 +186,7 @@ function App() {
           </div>
 
           <div className="w-full min-h-screen bg-black py-10 md:py-20 px-4 md:px-0">
-            <div className="cntnr flex flex-col md:flex-row items-center text-white w-full max-w-7xl mx-auto gap-8 md:gap-0">
-              <div className="limg relative w-full md:w-1/2 h-[250px] xs:h-[300px] md:h-[600px]">
-                <img
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-contain max-w-sm md:max-w-none"
-                  src="./imag.png"
-                  alt=""
-                />
-              </div>
-              <div className="rg w-full md:w-[40%] text-center md:text-left">
-                <h1 className="text-3xl xs:text-4xl md:text-8xl font-bold">Still Running,</h1>
-                <h1 className="text-3xl xs:text-4xl md:text-8xl font-bold">Not Hunting</h1>
-                <p className="mt-4 md:mt-10 text-sm xs:text-base md:text-xl font-[Helvetica_Now_Display] max-w-md mx-auto md:mx-0">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Distinctio possimus, asperiores nam, omnis inventore nesciunt
-                  a architecto eveniet saepe, ducimus necessitatibus at
-                  voluptate.
-                </p>
-                <p className="mt-3 text-sm xs:text-base md:text-xl font-[Helvetica_Now_Display] max-w-md mx-auto md:mx-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  eius illum fugit eligendi nesciunt quia similique velit
-                  excepturi soluta tenetur illo repellat consectetur laborum
-                  eveniet eaque, dicta, hic quisquam? Ex cupiditate ipsa nostrum
-                  autem sapiente.
-                </p>
-                <p className="mt-3 md:mt-10 text-sm xs:text-base md:text-xl font-[Helvetica_Now_Display] max-w-md mx-auto md:mx-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  eius illum fugit eligendi nesciunt quia similique velit
-                  excepturi soluta tenetur illo repellat consectetur laborum
-                  eveniet eaque, dicta, hic quisquam? Ex cupiditate ipsa nostrum
-                  autem sapiente.
-                </p>
-                <button className="bg-yellow-500 px-6 md:px-10 py-4 md:py-8 text-black mt-6 md:mt-10 text-xl md:text-4xl w-full md:w-auto rounded-lg hover:bg-yellow-400 transition-colors">
-                  Download Now
-                </button>
-              </div>
-            </div>
+
           </div>
         </div>
       )}
