@@ -128,9 +128,9 @@ function App() {
             <div className="navbar absolute top-0 left-0 z-[10] w-full py-4 md:py-10 px-4 md:px-10">
               <div className="logo flex gap-3 md:gap-7">
                 <div className="lines flex flex-col gap-[2px] md:gap-[5px]">
+                  <div className="line w-8 md:w-15 h-1 md:h-2 bg-orange-400"></div>
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-white"></div>
-                  <div className="line w-5 md:w-8 h-1 md:h-2 bg-white"></div>
-                  <div className="line w-3 md:w-5 h-1 md:h-2 bg-white"></div>
+                  <div className="line w-8 md:w-15 h-1 md:h-2 bg-green-700"></div>
                 </div>
                 <h3 className="text-xl md:text-4xl -mt-[4px] md:-mt-[8px] leading-none text-zinc-100">
                 Frontend Developer
@@ -138,7 +138,7 @@ function App() {
               </div>
             </div>
 
-            <div className="imagesdiv relative overflow-hidden w-full h-[85vh] md:h-screen">
+            <div className="imagesdiv relative overflow-hidden w-full h-[80vh] md:h-screen">
               <img
                 className="absolute sky scale-[0.9] rotate-[-20deg] top-0 left-0 w-full h-full object-cover"
                 src="./sky1.webp"
@@ -152,10 +152,9 @@ function App() {
               <div className="text text-zinc-100 flex flex-col gap-2 absolute top-[15%] md:top-10 left-1/2 -translate-x-1/2 scale-[0.45] md:scale-[0.6] rotate-[-10deg] w-full text-center">
                 <h1 className="text-[4rem] xs:text-[5rem] md:text-[7rem] leading-none">Pranava</h1>
                 <h1 className="text-[4rem] xs:text-[5rem] md:text-[7rem] leading-none mt-[0px] md:mt-0">Holla</h1>
-
               </div>
               <img
-                className="absolute character z-10 bottom-[20] sm:bottom-[-20%] md:bottom-[-80%] left-1/2 translate-x-1/2 w-[95%] xs:w-[85%] sm:w-[60%] md:w-auto h-[75vh] object-contain scale-[0.85] sm:scale-[0.8] md:scale-[1.2]"
+                className="absolute character z-10 bottom-[30] sm:bottom-[30%] md:bottom-[80%] left-1/2 translate-y-[0%] md:-translate-y-[20%] translate-x-1/2 w-[95%] xs:w-[85%] sm:w-[60%] md:w-[75vh] h-[75vh] object-contain scale-[0.85] sm:scale-[0.8] md:scale-[1.2]"
                 src="./pran1.webp"
                 alt=""
               />
@@ -165,7 +164,7 @@ function App() {
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="flex gap-2 md:gap-4 items-center mb-3 md:mb-0">
                   <i className="text-xl md:text-4xl ri-arrow-down-line"></i>
-                  <h3 className="text-base md:text-xl font-[Helvetica_Now_Display]">
+                  <h3 className="text-base md:text-xl font-[Gilroy]">
                     Scroll Down
                   </h3>
                 </div>
