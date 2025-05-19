@@ -113,11 +113,11 @@ function App() {
                 <text
                   x="50%"
                   y="50%"
-                  fontSize="250"
+                  fontSize="200"
                   textAnchor="middle"
                   fill="white"
                   dominantBaseline="middle"
-                  fontFamily="Arial Black"
+                  fontFamily="PlayReg"
                 >
                  PH
                 </text>
@@ -143,7 +143,7 @@ function App() {
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-white origin-left"></div>
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-green-700 origin-left"></div>
                 </div>
-                <h3 className="text-xl md:text-4xl -mt-[4px] md:-mt-[8px] leading-none text-zinc-100 font-[PlayReg]">
+                <h3 className="text-lg md:text-3xl -mt-[4px] md:-mt-[8px] leading-none text-zinc-100 font-[PlayReg]">
                 Frontend Developer
                 </h3>
               </div>
@@ -160,8 +160,8 @@ function App() {
                 src="./blr.webp"
                 alt=""
               />
-              <div className="text text-zinc-100 flex flex-col gap-2 absolute top-[15%] md:top-10 left-1/2 -translate-x-1/2 scale-[0.45] md:scale-[0.6] rotate-[-10deg] w-full text-center font-[PlayReg]">
-                <h1 className="text-[4rem] xs:text-[5rem] md:text-[7rem] leading-none">Pranava</h1>
+              <div className="text text-zinc-50 flex flex-col gap-2 absolute top-[15%] md:top-10 left-1/2 -translate-x-1/2 scale-[0.45] md:scale-[0.6] rotate-[-10deg] w-full text-center font-[PlayReg]">
+                <h1 className="text-[4rem] xs:text-[5rem] md:text-[7rem] leading-none">Pranav</h1>
                 <h1 className="text-[4rem] xs:text-[5rem] md:text-[7rem] leading-none mt-[0px] md:mt-0">Holla</h1>
               </div>
               <img
