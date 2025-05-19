@@ -89,6 +89,16 @@ function App() {
         x: xMove * 1.7,
       });
     });
+
+    // Logo lines animation
+    gsap.from(".line", {
+      scaleX: 0,
+      duration: 2.2,
+      stagger: 0.2,
+      repeat: Infinity,
+      ease: "power2.out",
+      transformOrigin: "left",
+    });
   }, [showContent]);
 
   return (
@@ -128,11 +138,11 @@ function App() {
             <div className="navbar absolute top-0 left-0 z-[10] w-full py-4 md:py-10 px-4 md:px-10">
               <div className="logo flex gap-3 md:gap-7">
                 <div className="lines flex flex-col gap-[2px] md:gap-[5px]">
-                  <div className="line w-8 md:w-15 h-1 md:h-2 bg-orange-400"></div>
-                  <div className="line w-8 md:w-15 h-1 md:h-2 bg-white"></div>
-                  <div className="line w-8 md:w-15 h-1 md:h-2 bg-green-700"></div>
+                  <div className="line w-8 md:w-15 h-1 md:h-2 bg-orange-400 origin-left"></div>
+                  <div className="line w-8 md:w-15 h-1 md:h-2 bg-white origin-left"></div>
+                  <div className="line w-8 md:w-15 h-1 md:h-2 bg-green-700 origin-left"></div>
                 </div>
-                <h3 className="text-xl md:text-4xl -mt-[4px] md:-mt-[8px] leading-none text-zinc-100">
+                <h3 className="text-xl md:text-4xl -mt-[4px] md:-mt-[8px] leading-none text-zinc-100 font-[PlayReg]">
                 Frontend Developer
                 </h3>
               </div>
@@ -149,7 +159,7 @@ function App() {
                 src="./blr.webp"
                 alt=""
               />
-              <div className="text text-zinc-100 flex flex-col gap-2 absolute top-[15%] md:top-10 left-1/2 -translate-x-1/2 scale-[0.45] md:scale-[0.6] rotate-[-10deg] w-full text-center">
+              <div className="text text-zinc-100 flex flex-col gap-2 absolute top-[15%] md:top-10 left-1/2 -translate-x-1/2 scale-[0.45] md:scale-[0.6] rotate-[-10deg] w-full text-center font-[PlayReg]">
                 <h1 className="text-[4rem] xs:text-[5rem] md:text-[7rem] leading-none">Pranava</h1>
                 <h1 className="text-[4rem] xs:text-[5rem] md:text-[7rem] leading-none mt-[0px] md:mt-0">Holla</h1>
               </div>
@@ -164,7 +174,7 @@ function App() {
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="flex gap-2 md:gap-4 items-center mb-3 md:mb-0">
                   <i className="text-xl md:text-4xl ri-arrow-down-line"></i>
-                  <h3 className="text-base md:text-xl font-[Gilroy]">
+                  <h3 className="text-base md:text-xl font-[PlayReg]">
                     Scroll Down
                   </h3>
                 </div>
