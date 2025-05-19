@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "remixicon/fonts/remixicon.css";
@@ -6,6 +6,8 @@ import "./index.css"
 
 function App() {
   let [showContent, setShowContent] = useState(false);
+  const textContainerRef = useRef(null);
+
   useGSAP(() => {
     const tl = gsap.timeline();
 
@@ -100,6 +102,45 @@ function App() {
       ease: "power2.out",
       transformOrigin: "left",
     });
+
+    // Text rotation animation
+    const texts = textContainerRef.current.children;
+    let currentIndex = 1;
+
+    const animateText = () => {
+      gsap.to(texts, {
+        opacity: 0,
+        y: -20,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "power2.inOut",
+        onComplete: () => {
+          // Hide all texts
+          gsap.set(texts, { display: "none" });
+          // Show current text
+          gsap.set(texts[currentIndex], { display: "block" });
+          // Animate in
+          gsap.to(texts[currentIndex], {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            ease: "power2.out"
+          });
+          // Update index
+          currentIndex = (currentIndex + 1) % texts.length;
+        }
+      });
+    };
+
+    // Initial setup
+    gsap.set(texts, { opacity: 0, display: "none" });
+    gsap.set(texts[0], { display: "block", opacity: 1 });
+
+    // Start the interval
+    const interval = setInterval(animateText, 5000);
+
+    // Cleanup
+    return () => clearInterval(interval);
   }, [showContent]);
 
   return (
@@ -143,9 +184,14 @@ function App() {
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-white origin-left"></div>
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-green-700 origin-left"></div>
                 </div>
-                <h3 className="text-lg md:text-3xl -mt-[4px] md:-mt-[8px] leading-none text-zinc-100 font-[PlayReg]">
-                Frontend Developer
-                </h3>
+                <div ref={textContainerRef} className="relative">
+                  <h3 className="text-lg md:text-3xl flex -mt-[3px] md:-mt-[2px] leading-none text-zinc-100 font-[PlayReg] ">
+                    Frontend Developer
+                  </h3>
+                  <h3 className="text-lg md:text-3xl flex -mt-[3px] md:-mt-[2px] leading-none text-zinc-100 font-[PlayReg] ">
+                    Ai Agents
+                  </h3>
+                </div>
               </div>
             </div>
 
