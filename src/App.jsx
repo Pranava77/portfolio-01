@@ -154,7 +154,7 @@ function App() {
                 <h1 className="text-[4rem] xs:text-[5rem] md:text-[7rem] leading-none mt-[0px] md:mt-0">Holla</h1>
               </div>
               <img
-                className="absolute character z-10 bottom-[30] sm:bottom-[30%] md:bottom-[80%] left-1/2 translate-y-[0%] md:-translate-y-[20%] translate-x-1/2 w-[95%] xs:w-[85%] sm:w-[60%] md:w-[75vh] h-[75vh] object-contain scale-[0.85] sm:scale-[0.8] md:scale-[1.2]"
+                className="absolute character z-10 bottom-[30] sm:bottom-[30%] md:bottom-[80%] left-1/2 translate-y-[0%] sm:-translate-y-[20%] md:-translate-y-[20%] translate-x-1/2 w-[95%] xs:w-[85%] sm:w-[60%] md:w-[75vh] h-[75vh] object-contain scale-[0.85] sm:scale-[0.8] md:scale-[1.2]"
                 src="./pran1.webp"
                 alt=""
               />
@@ -168,15 +168,15 @@ function App() {
                     Scroll Down
                   </h3>
                 </div>
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-2 items-center">
                   <img
-                    className="h-[25px] md:h-[55px]"
-                    src="./ps5.png"
+                    className="h-[105px] md:h-[175px]"
+                    src="./MERN.png"
                     alt=""
                   />
                   <img
-                    className="h-[25px] md:h-[55px]"
-                    src="./xbox.png"
+                    className="h-[75px] md:h-[145px]"
+                    src="./PNCL.png"
                     alt=""
                   />
                 </div>
