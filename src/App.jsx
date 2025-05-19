@@ -171,11 +171,11 @@ function App() {
               />
             </div>
             
-            <div className="btmbar text-white absolute bottom-0 left-0 w-full py-4 md:py-8 px-4 md:px-10 bg-gradient-to-t from-black to-transparent">
+            <div className="btmbar text-white absolute bottom-0 left-0 w-full py-4 md:py-8 px-4 md:px-10 bg-gradient-to-t from-black to-transparent mt-4">
               <div className="flex flex-col md:flex-row items-center justify-between">
-                <div className="flex gap-2 md:gap-4 items-center mb-3 md:mb-0">
+                <div className="flex gap-0 md:gap-4 items-center mb-0 md:mb-0 ">
                   <i className="text-xl md:text-4xl ri-arrow-down-line"></i>
-                  <h3 className="text-base md:text-xl font-[PlayReg]">
+                  <h3 className="text-base md:text-xl font-[PlayReg] ">
                     Scroll Down
                   </h3>
                 </div>
