@@ -161,8 +161,8 @@ function App() {
                 alt=""
               />
               <div className="text text-zinc-50 flex flex-col gap-2 absolute top-[15%] md:top-10 left-1/2 -translate-x-1/2 scale-[0.45] md:scale-[0.6] rotate-[-10deg] w-full text-center font-[PlayReg]">
-                <h1 className="text-[4rem] xs:text-[5rem] md:text-[7rem] leading-none">Pranav</h1>
-                <h1 className="text-[4rem] xs:text-[5rem] md:text-[7rem] leading-none mt-[0px] md:mt-0">Holla</h1>
+                <h1 className="text-[3rem] xs:text-[4rem] sm:text-[5rem] md:text-[7rem] leading-none">Pranav</h1>
+                <h1 className="text-[3rem] xs:text-[4rem] sm:text-[5rem] md:text-[7rem] leading-none mt-[0px] md:mt-0">Holla</h1>
               </div>
               <img
                 className="absolute character z-10 bottom-[30] sm:bottom-[30%] md:bottom-[80%] left-1/2 translate-y-[0%] sm:-translate-y-[20%] md:-translate-y-[20%] translate-x-1/2 w-[95%] xs:w-[85%] sm:w-[60%] md:w-[75vh] h-[75vh] object-contain scale-[0.85] sm:scale-[0.8] md:scale-[1.2]"
