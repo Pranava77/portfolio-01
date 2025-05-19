@@ -229,7 +229,7 @@ function App() {
                     Scroll Down
                   </h3>
                 </div>
-                <div className="flex gap-2 items-center select-none user-drag-none">
+                <div className="flex  items-center select-none user-drag-none">
                   <img
                     draggable="false"
                     className="h-[105px] md:h-[175px]"
@@ -238,7 +238,7 @@ function App() {
                   />
                   <img
                     draggable="false"
-                    className="h-[75px] md:h-[145px]"
+                    className="h-[80px] md:h-[125px]"
                     src="./PNCL.png"
                     alt=""
                   />
