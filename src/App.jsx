@@ -282,21 +282,21 @@ function App() {
                 <div className="flex items-center select-none user-drag-none">
                   <img
                     draggable="false"
-                    className="h-[105px] md:h-[175px] sm:h-[100]"
+                    className="h-[105px] md:h-[155px] sm:h-[90]"
                     src="./MERN.png"
                     alt=""
                   />
 
                   <img
                     draggable="false"
-                    className="h-[80px] md:h-[125px] sm:h-[80]"
+                    className="h-[80px] md:h-[125px] sm:h-[60]"
                     src="./PNCL.png"
                     alt=""
                   />
 
                   <img
                     draggable="false"
-                    className="h-[105px] md:h-[175px] sm:h-[100]"
+                    className="h-[105px] md:h-[155px] sm:h-[90]"
                     src="./MERN.png"
                     alt=""
                   />
