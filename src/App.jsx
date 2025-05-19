@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "remixicon/fonts/remixicon.css";
@@ -7,6 +7,33 @@ import "./index.css"
 function App() {
   let [showContent, setShowContent] = useState(false);
   const textContainerRef = useRef(null);
+
+
+// music  
+
+const audioRef = useRef(new Audio('/ui.mp3'));
+
+const handleClick = () => {
+  const audio = audioRef.current;
+  audio.currentTime = 0;
+  audio.play();
+  // Stop after 3.5 seconds (3500 ms)
+  setTimeout(() => {
+    audio.pause();
+    audio.currentTime = 0;  // rewind if you want to replay from start
+  }, 200);
+};
+
+
+
+
+
+
+  useEffect(() => {
+    const handler = (e) => e.preventDefault();
+    document.addEventListener('contextmenu', handler);
+    return () => document.removeEventListener('contextmenu', handler);
+  }, []);
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -179,11 +206,11 @@ function App() {
           <div className="landing overflow-hidden relative w-full min-h-screen bg-black">
             <div className="navbar absolute top-0 left-0 z-[10] w-full py-4 md:py-10 px-4 md:px-10">
               <div className="logo flex gap-3 md:gap-7">
-                <div className="lines flex flex-col gap-[2px] md:gap-[5px]">
+                <button  onClick={handleClick} className="lines flex flex-col gap-[2px] md:gap-[5px]">
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-orange-400 origin-left"></div>
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-white origin-left"></div>
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-green-700 origin-left"></div>
-                </div>
+                </button>
                 <div ref={textContainerRef} className="relative">
                   <h3 className="text-lg md:text-3xl flex -mt-[3px] md:-mt-[2px] leading-none text-zinc-100 font-[PlayReg] ">
                     Frontend Developer
@@ -238,7 +265,7 @@ function App() {
                   />
                   <img
                     draggable="false"
-                    className="h-[80px] md:h-[125px]" 
+                    className="h-[80px] md:h-[125px]"
                     src="./PNCL.png"
                     alt=""
                   />
@@ -249,7 +276,7 @@ function App() {
 
           <div className="w-full min-h-screen bg-black py-10 md:py-20 px-4 md:px-0">
             <div className="text-white text-center text-2xl font-[PlayReg]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum architecto nemo fuga culpa inventore, minima porro incidunt tenetur doloremque.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum architecto nemo fuga culpa inventore, minima porro incidunt tenetur doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dolor delectus, aperiam eos, aliquid nihil commodi voluptatem at cupiditate maiores earum voluptate veniam fuga velit.
             </div>
           </div>
         </div>
