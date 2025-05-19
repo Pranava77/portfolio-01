@@ -205,12 +205,12 @@ const handleClick = () => {
         <div className="main w-full overflow-x-hidden select-none">
           <div className="landing overflow-hidden relative w-full min-h-screen bg-black">
             <div className="navbar absolute top-0 left-0 z-[10] w-full py-4 md:py-10 px-4 md:px-10">
-              <div className="logo flex gap-3 md:gap-7">
-                <button  onClick={handleClick} className="lines flex flex-col gap-[2px] md:gap-[5px]">
+              <button  onClick={handleClick} className="logo flex gap-3 md:gap-7">
+                <div  className="lines flex flex-col gap-[2px] md:gap-[5px]">
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-orange-400 origin-left"></div>
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-white origin-left"></div>
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-green-700 origin-left"></div>
-                </button>
+                </div>
                 <div ref={textContainerRef} className="relative">
                   <h3 className="text-lg md:text-3xl flex -mt-[3px] md:-mt-[2px] leading-none text-zinc-100 font-[PlayReg] ">
                     Frontend Developer
@@ -222,7 +222,7 @@ const handleClick = () => {
                     AI Automation
                   </h3>
                 </div>
-              </div>
+              </button>
             </div>
 
             <div className="imagesdiv relative overflow-hidden w-full h-[80vh] md:h-screen" >
