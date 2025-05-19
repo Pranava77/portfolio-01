@@ -229,7 +229,7 @@ function App() {
                     Scroll Down
                   </h3>
                 </div>
-                <div className="flex  items-center select-none user-drag-none">
+                <div className="flex items-center select-none user-drag-none">
                   <img
                     draggable="false"
                     className="h-[105px] md:h-[175px]"
@@ -238,7 +238,7 @@ function App() {
                   />
                   <img
                     draggable="false"
-                    className="h-[80px] md:h-[125px]"
+                    className="h-[80px] md:h-[125px]" 
                     src="./PNCL.png"
                     alt=""
                   />
@@ -248,7 +248,9 @@ function App() {
           </div>
 
           <div className="w-full min-h-screen bg-black py-10 md:py-20 px-4 md:px-0">
-
+            <div className="text-white text-center text-2xl font-[PlayReg]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum architecto nemo fuga culpa inventore, minima porro incidunt tenetur doloremque.
+            </div>
           </div>
         </div>
       )}
