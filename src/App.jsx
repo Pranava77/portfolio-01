@@ -279,7 +279,7 @@ function App() {
                     Scroll Down
                   </h3>
                 </div>
-                <div className="flex items-center select-none user-drag-none">
+                <div className="flex gap-0 items-center select-none user-drag-none">
                   <img
                     draggable="false"
                     className="h-[105px] md:h-[155px] sm:h-[90]"
@@ -308,7 +308,7 @@ function App() {
 
           <div className="w-full min-h-screen bg-black py-10 md:py-20 px-4 md:px-4">
             <div className="relative overflow-hidden">
-              <div ref={textRevealRef} className="text-white text-center text-2xl md:text-4xl font-[PlayReg] leading-relaxed">
+              <div ref={textRevealRef} className="text-white text-center text-2xl sm:text-3xl md:text-4xl font-[PlayReg] leading-relaxed">
                 voluptatum architecto nemo fuga culpa inventore, Doloribus voluptatum architecto nemo fuga culpa inventore, minima porro incidunt tenetur doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dolor delectus, aperiam eos, aliquid nihil commodi voluptatem at cupiditate maiores earum voluptate veniam fuga velit. lorem10
               </div>
             </div>
