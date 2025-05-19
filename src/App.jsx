@@ -7,22 +7,22 @@ import "./index.css"
 function App() {
   let [showContent, setShowContent] = useState(false);
   const textContainerRef = useRef(null);
+  const textRevealRef = useRef(null);
 
+  // music  
 
-// music  
+  const audioRef = useRef(new Audio('/ui.mp3'));
 
-const audioRef = useRef(new Audio('/ui.mp3'));
-
-const handleClick = () => {
-  const audio = audioRef.current;
-  audio.currentTime = 0;
-  audio.play();
-  // Stop after 3.5 seconds (3500 ms)
-  setTimeout(() => {
-    audio.pause();
-    audio.currentTime = 0;  // rewind if you want to replay from start
-  }, 200);
-};
+  const handleClick = () => {
+    const audio = audioRef.current;
+    audio.currentTime = 0;
+    audio.play();
+    // Stop after 3.5 seconds (3500 ms)
+    setTimeout(() => {
+      audio.pause();
+      audio.currentTime = 0;  // rewind if you want to replay from start
+    }, 200);
+  };
 
 
 
@@ -123,7 +123,7 @@ const handleClick = () => {
     // Logo lines animation
     gsap.from(".line", {
       scaleX: 0,
-      duration: 2.2,
+      duration: 4.7,
       stagger: 0.2,
       repeat: Infinity,
       ease: "power2.out",
@@ -138,7 +138,7 @@ const handleClick = () => {
       gsap.to(texts, {
         opacity: 0,
         y: -20,
-        duration: 0.5,
+        duration: 2,
         stagger: 0.1,
         ease: "power2.inOut",
         onComplete: () => {
@@ -168,6 +168,29 @@ const handleClick = () => {
 
     // Cleanup
     return () => clearInterval(interval);
+  }, [showContent]);
+
+  useGSAP(() => {
+    if (!showContent) return;
+
+    // Text reveal animation with clip-path
+    const textReveal = textRevealRef.current;
+    if (textReveal) {
+      gsap.set(textReveal, {
+        clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"
+      });
+
+      gsap.to(textReveal, {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        duration: 2.5,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: textReveal,
+          start: "top 20%",
+          toggleActions: "play none none reverse"
+        }
+      });
+    }
   }, [showContent]);
 
   return (
@@ -205,8 +228,8 @@ const handleClick = () => {
         <div className="main w-full overflow-x-hidden select-none">
           <div className="landing overflow-hidden relative w-full min-h-screen bg-black">
             <div className="navbar absolute top-0 left-0 z-[10] w-full py-4 md:py-10 px-4 md:px-10">
-              <button  onClick={handleClick} className="logo flex gap-3 md:gap-7">
-                <div  className="lines flex flex-col gap-[2px] md:gap-[5px]">
+              <button onClick={handleClick} className="logo flex gap-3 md:gap-7">
+                <div className="lines flex flex-col gap-[2px] md:gap-[5px]">
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-orange-400 origin-left"></div>
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-white origin-left"></div>
                   <div className="line w-8 md:w-15 h-1 md:h-2 bg-green-700 origin-left"></div>
@@ -237,7 +260,7 @@ const handleClick = () => {
                 alt=""
               />
               <div className="text text-zinc-50 flex flex-col gap-2 absolute top-[15%] md:top-10 left-1/2 -translate-x-1/2 scale-[0.45] md:scale-[0.6] rotate-[-10deg] w-full text-center font-[PlayReg]">
-                <h1 className="text-[3rem] xs:text-[4rem] sm:text-[5rem] md:text-[7rem] leading-none">Pranav</h1>
+                <h1 className="text-[3rem] xs:text-[4rem] sm:text-[5rem] md:text-[7rem] leading-none">Pranava</h1>
                 <h1 className="text-[3rem] xs:text-[4rem] sm:text-[5rem] md:text-[7rem] leading-none mt-[0px] md:mt-0">Holla</h1>
               </div>
               <img
@@ -256,28 +279,43 @@ const handleClick = () => {
                     Scroll Down
                   </h3>
                 </div>
-                <div className="flex items-center select-none user-drag-none">
+                <div className="flex  items-center select-none user-drag-none">
                   <img
                     draggable="false"
                     className="h-[105px] md:h-[175px]"
                     src="./MERN.png"
                     alt=""
                   />
+
                   <img
                     draggable="false"
                     className="h-[80px] md:h-[125px]"
                     src="./PNCL.png"
                     alt=""
                   />
+
+                  <img
+                    draggable="false"
+                    className="h-[105px] md:h-[175px]"
+                    src="./MERN.png"
+                    alt=""
+                  />
+
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="w-full min-h-screen bg-black py-10 md:py-20 px-4 md:px-0">
-            <div className="text-white text-center text-2xl font-[PlayReg]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum architecto nemo fuga culpa inventore, minima porro incidunt tenetur doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dolor delectus, aperiam eos, aliquid nihil commodi voluptatem at cupiditate maiores earum voluptate veniam fuga velit.
+          <div className="w-full min-h-screen bg-black py-10 md:py-20 px-4 md:px-4">
+            <div className="relative overflow-hidden">
+              <div ref={textRevealRef} className="text-white text-center text-2xl md:text-4xl font-[PlayReg] leading-relaxed">
+                voluptatum architecto nemo fuga culpa inventore, Doloribus voluptatum architecto nemo fuga culpa inventore, minima porro incidunt tenetur doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dolor delectus, aperiam eos, aliquid nihil commodi voluptatem at cupiditate maiores earum voluptate veniam fuga velit. lorem10
+              </div>
             </div>
+            <div className="h-[40vh] md:h-[50vh] bg-green-900 mt-6 md:mt-16 md:w-[60vw] rounded-4xl md:mx-auto">
+                <img src="" alt="" />
+            </div>
+            
           </div>
         </div>
       )}
