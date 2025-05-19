@@ -315,7 +315,7 @@ function App() {
             <div className="h-[40vh] md:h-[50vh] bg-green-900 mt-6 md:mt-16 md:w-[60vw] rounded-4xl md:mx-auto">
                 <img src="" alt="" />
             </div>
-            
+          
           </div>
         </div>
       )}
