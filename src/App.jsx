@@ -160,7 +160,7 @@ function App() {
                   dominantBaseline="middle"
                   fontFamily="PlayReg"
                 >
-                 PH
+                  PH
                 </text>
               </g>
             </mask>
@@ -175,7 +175,7 @@ function App() {
         </svg>
       </div>
       {showContent && (
-        <div className="main w-full overflow-x-hidden">
+        <div className="main w-full overflow-x-hidden select-none">
           <div className="landing overflow-hidden relative w-full min-h-screen bg-black">
             <div className="navbar absolute top-0 left-0 z-[10] w-full py-4 md:py-10 px-4 md:px-10">
               <div className="logo flex gap-3 md:gap-7">
@@ -189,13 +189,16 @@ function App() {
                     Frontend Developer
                   </h3>
                   <h3 className="text-lg md:text-3xl flex -mt-[3px] md:-mt-[2px] leading-none text-zinc-100 font-[PlayReg] ">
-                    Ai Agents
+                    AI Agents
+                  </h3>
+                  <h3 className="text-lg md:text-3xl flex -mt-[3px] md:-mt-[2px] leading-none text-zinc-100 font-[PlayReg] ">
+                    AI Automation
                   </h3>
                 </div>
               </div>
             </div>
 
-            <div className="imagesdiv relative overflow-hidden w-full h-[80vh] md:h-screen">
+            <div className="imagesdiv relative overflow-hidden w-full h-[80vh] md:h-screen" >
               <img
                 className="absolute sky scale-[0.9] rotate-[-20deg] top-0 left-0 w-full h-full object-cover"
                 src="./sky1.webp"
@@ -211,12 +214,13 @@ function App() {
                 <h1 className="text-[3rem] xs:text-[4rem] sm:text-[5rem] md:text-[7rem] leading-none mt-[0px] md:mt-0">Holla</h1>
               </div>
               <img
+                draggable="false"
                 className="absolute character z-10 bottom-[30] sm:bottom-[30%] md:bottom-[80%] left-1/2 translate-y-[0%] sm:-translate-y-[20%] md:-translate-y-[20%] translate-x-1/2 w-[95%] xs:w-[85%] sm:w-[60%] md:w-[75vh] h-[75vh] object-contain scale-[0.85] sm:scale-[0.8] md:scale-[1.2]"
                 src="./pran1.webp"
                 alt=""
               />
             </div>
-            
+
             <div className="btmbar text-white absolute bottom-0 left-0 w-full py-4 md:py-8 px-4 md:px-10 bg-gradient-to-t from-black to-transparent mt-4">
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="flex gap-0 md:gap-4 items-center mb-0 md:mb-0 ">
@@ -225,13 +229,15 @@ function App() {
                     Scroll Down
                   </h3>
                 </div>
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-2 items-center select-none user-drag-none">
                   <img
+                    draggable="false"
                     className="h-[105px] md:h-[175px]"
                     src="./MERN.png"
                     alt=""
                   />
                   <img
+                    draggable="false"
                     className="h-[75px] md:h-[145px]"
                     src="./PNCL.png"
                     alt=""
