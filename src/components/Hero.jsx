@@ -273,8 +273,8 @@ function Hero() {
 
                   <img
                     draggable="false"
-                    className="h-[105px] md:h-[155px] sm:h-[90]"
-                    src="./MERN.png"
+                    className="h-[135px] md:h-[220px] sm:h-[90]"
+                    src="./ADG.png"
                     alt=""
                   />
 
