@@ -259,7 +259,7 @@ function Hero() {
                 <div className="flex gap-0 items-center select-none user-drag-none">
                   <img
                     draggable="false"
-                    className="h-[105px] md:h-[155px] sm:h-[90]"
+                    className="h-[105px] md:h-[155px] sm:h-[70]"
                     src="./MERN.png"
                     alt=""
                   />
@@ -273,7 +273,7 @@ function Hero() {
 
                   <img
                     draggable="false"
-                    className="h-[135px] md:h-[220px] sm:h-[90]"
+                    className="h-[135px] md:h-[220px] sm:h-[70]"
                     src="./ADG.png"
                     alt=""
                   />
